@@ -32,6 +32,7 @@ Once the extension is installed, simply use it in your code by  :
 ```php
 <?= \dominus77\sociallikesnext\SocialLikes::widget([
         'theme' => 'flat', // flat, light, birman
+        'title' => false,  // Display name of social networks, default true
         /*'containerOptions' => [
             'class' => 'social-likes_vertical',        // All buttons in a column.
             'data-url' => 'http://landscapists.info/', // URL of a shareable page. Current page by default.

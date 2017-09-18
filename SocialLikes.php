@@ -20,6 +20,12 @@ class SocialLikes extends \yii\base\Widget
     public $theme = 'flat';
 
     /**
+     * Display name of social networks, default true
+     * @var bool
+     */
+    public $title = true;
+
+    /**
      * @var array
      */
     public $items = [];
@@ -61,7 +67,7 @@ class SocialLikes extends \yii\base\Widget
     {
         echo Html::beginTag('div', $this->containerOptions);
         foreach ($this->items as $key => $options) {
-            echo Html::tag('div', $key, $options);
+            echo Html::tag('div', $this->title ? $key : '', $options);
         }
         echo Html::endTag('div');
     }
