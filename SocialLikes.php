@@ -57,7 +57,7 @@ class SocialLikes extends \yii\base\Widget
             'id' => $this->id,
         ];
         $this->containerOptions = array_merge($this->containerOptions, $containerOptions);
-        $this->containerOptions['class'] = 'social-likes ' . $this->containerOptions['class'];
+        $this->containerOptions['class'] = (isset($this->containerOptions['class']) && !empty($this->containerOptions['class'])) ? 'social-likes ' . $this->containerOptions['class'] : 'social-likes';
     }
 
     /**
@@ -65,11 +65,11 @@ class SocialLikes extends \yii\base\Widget
      */
     public function run()
     {
-        echo Html::beginTag('div', $this->containerOptions);
+        echo Html::beginTag('div', $this->containerOptions) . PHP_EOL;
         foreach ($this->items as $key => $options) {
-            echo Html::tag('div', $this->title ? $key : '', $options);
+            echo Html::tag('div', $this->title ? $key : '', $options) . PHP_EOL;
         }
-        echo Html::endTag('div');
+        echo Html::endTag('div') . PHP_EOL;
     }
 
     /**
