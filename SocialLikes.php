@@ -96,7 +96,7 @@ class SocialLikes extends \yii\base\Widget
             $view->registerCss($this->clientCss);
         }
 
-        if ($this->clientButtons) {
+        if (!empty($this->clientButtons)) {
             $clientButtons = Json::encode($this->clientButtons);
             $script = new JsExpression("
                 var socialLikesButtons = {$clientButtons}
@@ -104,7 +104,7 @@ class SocialLikes extends \yii\base\Widget
             $view->registerJs($script, \yii\web\View::POS_BEGIN);
         }
 
-        if ($this->clientOptions) {
+        if (!empty($this->clientOptions)) {
             $options = Json::encode($this->clientOptions);
             $script = new JsExpression("
                 var container = document.getElementById('{$this->id}');
