@@ -6,6 +6,7 @@ use yii\web\JsExpression;
 use yii\helpers\Json;
 use yii\helpers\Html;
 use dominus77\sociallikesnext\assets\SocialLikesAsset;
+use yii\web\View;
 
 /**
  * Class SocialLikes
@@ -39,6 +40,16 @@ class SocialLikes extends \yii\base\Widget
      * @var array
      */
     public $clientOptions = [];
+
+    /**
+     * @var array
+     */
+    public $clientButtons = [];
+
+    /**
+     * @var string
+     */
+    public $clientCss = '';
 
     /**
      * @var string
@@ -80,6 +91,19 @@ class SocialLikes extends \yii\base\Widget
         $view = $this->getView();
         SocialLikesAsset::$theme = $this->theme;
         SocialLikesAsset::register($view);
+
+        if (!empty($this->clientCss)) {
+            $view->registerCss($this->clientCss);
+        }
+
+        if ($this->clientButtons) {
+            $clientButtons = Json::encode($this->clientButtons);
+            $script = new JsExpression("
+                var socialLikesButtons = {$clientButtons}
+            ");
+            $view->registerJs($script, \yii\web\View::POS_BEGIN);
+        }
+
         if ($this->clientOptions) {
             $options = Json::encode($this->clientOptions);
             $script = new JsExpression("
