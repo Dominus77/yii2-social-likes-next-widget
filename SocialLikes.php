@@ -69,6 +69,8 @@ class SocialLikes extends \yii\base\Widget
         ];
         $this->containerOptions = array_merge($this->containerOptions, $containerOptions);
         $this->containerOptions['class'] = (isset($this->containerOptions['class']) && !empty($this->containerOptions['class'])) ? 'social-likes ' . $this->containerOptions['class'] : 'social-likes';
+
+
     }
 
     /**
@@ -78,7 +80,12 @@ class SocialLikes extends \yii\base\Widget
     {
         echo Html::beginTag('div', $this->containerOptions) . PHP_EOL;
         foreach ($this->items as $key => $options) {
-            echo Html::tag('div', $this->title ? $key : '', $options) . PHP_EOL;
+            $title = $this->title;
+            if (isset($options['title']))
+                $this->title = $options['title'];
+            if (isset($options['serviceOptions']))
+                echo Html::tag('div', $this->title ? $key : '', $options['serviceOptions']) . PHP_EOL;
+            $this->title = $title;
         }
         echo Html::endTag('div') . PHP_EOL;
     }
@@ -101,7 +108,7 @@ class SocialLikes extends \yii\base\Widget
             $script = new JsExpression("
                 var socialLikesButtons = {$clientButtons}
             ");
-            $view->registerJs($script, \yii\web\View::POS_BEGIN);
+            $view->registerJs($script, View::POS_BEGIN);
         }
 
         if (!empty($this->clientOptions)) {
