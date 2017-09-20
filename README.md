@@ -49,15 +49,15 @@ Once the extension is installed, simply use it in your code by  :
                     ],
                 ],
             ],
-            'ВКонтакте' => [
+            'Vkontakte' => [
                 'serviceOptions' => [
-                    'title' => 'Share link on ВКонтакте',
+                    'title' => 'Share link on Vkontakte',
                     'data-service' => 'vkontakte',
                 ],
             ],
-            'Одноклассники' => [
+            'Odnoklassniki' => [
                 'serviceOptions' => [
-                    'title' => 'Share link on Одноклассниках',
+                    'title' => 'Share link on Odnoklassniki',
                     'data-service' => 'odnoklassniki',
                 ],
             ],
