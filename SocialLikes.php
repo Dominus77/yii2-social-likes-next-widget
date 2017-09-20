@@ -14,6 +14,10 @@ use yii\web\View;
  */
 class SocialLikes extends \yii\base\Widget
 {
+    const THEME_FLAT = 'flat';
+    const THEME_LIGHT = 'light';
+    const THEME_BIRMAN = 'birman';
+
     /**
      * Theme buttons
      * @var string flat, light, birman
@@ -68,9 +72,9 @@ class SocialLikes extends \yii\base\Widget
             'id' => $this->id,
         ];
         $this->containerOptions = array_merge($this->containerOptions, $containerOptions);
-        $this->containerOptions['class'] = (isset($this->containerOptions['class']) && !empty($this->containerOptions['class'])) ? 'social-likes ' . $this->containerOptions['class'] : 'social-likes';
-
-
+        $this->containerOptions['class'] = (isset($this->containerOptions['class']) && !empty($this->containerOptions['class'])) ?
+            'social-likes ' . $this->containerOptions['class'] :
+            'social-likes';
     }
 
     /**
