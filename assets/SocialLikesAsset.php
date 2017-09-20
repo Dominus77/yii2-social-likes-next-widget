@@ -12,7 +12,7 @@ class SocialLikesAsset extends AssetBundle
 {
     public static $theme;
 
-    public $sourcePath = '@dominus77/sociallikesnext/assets/src';
+    public $sourcePath = '@dominus77/sociallikesnext/assets/src/dist';
 
     public $css = [];
 
@@ -21,7 +21,7 @@ class SocialLikesAsset extends AssetBundle
     public function init()
     {
         $min = YII_ENV_DEV ? '' : '.min';
-        $this->css[] = 'dist/social-likes_' . self::$theme . '.css';
-        $this->js[] = 'dist/social-likes' . $min . '.js';
+        $this->css[] = 'social-likes_' . self::$theme . '.css';
+        $this->js[] = 'social-likes' . $min . '.js';
     }
 }
