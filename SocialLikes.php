@@ -73,8 +73,8 @@ class SocialLikes extends \yii\base\Widget
         ];
         $this->containerOptions = array_merge($this->containerOptions, $containerOptions);
         $this->containerOptions['class'] = (isset($this->containerOptions['class']) && !empty($this->containerOptions['class'])) ?
-            'social-likes ' . $this->containerOptions['class'] :
-            'social-likes';
+            $this->theme . ' social-likes ' . $this->containerOptions['class'] :
+            $this->theme . ' social-likes';
     }
 
     /**
@@ -100,7 +100,6 @@ class SocialLikes extends \yii\base\Widget
     protected function registerAssets()
     {
         $view = $this->getView();
-        SocialLikesAsset::$theme = $this->theme;
         SocialLikesAsset::register($view);
 
         if (!empty($this->clientCss)) {
