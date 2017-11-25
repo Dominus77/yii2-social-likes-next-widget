@@ -1,6 +1,6 @@
 README
 ======
-Renders a [Social Likes Next](https://github.com/sapegin/social-likes-next) widget for Yii2.
+Renders a [Social Likes Next](http://social-likes-next.js.org/) widget for Yii2.
 
 Beautiful share buttons for social networks: Facebook, Twitter, Google+, Pinterest, Telegram, LinkedIn, Vkontakte and Odnoklassniki.
 
