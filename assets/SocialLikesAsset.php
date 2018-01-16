@@ -10,6 +10,9 @@ use yii\web\AssetBundle;
  */
 class SocialLikesAsset extends AssetBundle
 {
+    /**
+     * @inheritdoc
+     */
     public function init()
     {
         $min = YII_ENV_DEV ? '' : '.min';

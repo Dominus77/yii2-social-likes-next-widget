@@ -1,11 +1,10 @@
-README
-======
+# yii2-social-likes-next-widget
+
 Renders a [Social Likes Next](http://social-likes-next.js.org/) widget for Yii2.
 
 Beautiful share buttons for social networks: Facebook, Twitter, Google+, Pinterest, Telegram, LinkedIn, Vkontakte and Odnoklassniki.
 
-Installation
-------------
+## Installation
 
 The preferred way to install this extension is through [composer](http://getcomposer.org/download/).
 
@@ -24,8 +23,7 @@ or add
 to the require section of your `composer.json` file.
 
 
-Usage
------
+## Usage
 
 Once the extension is installed, simply use it in your code by  :
 
@@ -145,10 +143,8 @@ Once the extension is installed, simply use it in your code by  :
     ]); ?>
 ```
 
-More Information
------
+## More Information
 Please, check the [Social Likes Next](https://github.com/sapegin/social-likes-next/tree/v1.1.0)
 
-License
------
+## License
 The BSD License (BSD). Please see [License File](https://github.com/Dominus77/yii2-social-likes-next-widget/blob/master/LICENSE.md) for more information.
