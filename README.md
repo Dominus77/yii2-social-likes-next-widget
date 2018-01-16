@@ -1,5 +1,9 @@
 # yii2-social-likes-next-widget
 
+[![Latest Stable Version](https://poser.pugx.org/dominus77/yii2-social-likes-next-widget/v/stable)](https://packagist.org/packages/dominus77/yii2-social-likes-next-widget)
+[![License](https://poser.pugx.org/dominus77/yii2-social-likes-next-widget/license)](https://github.com/Dominus77/yii2-social-likes-next-widget/blob/master/LICENSE.md)
+[![Total Downloads](https://poser.pugx.org/dominus77/yii2-social-likes-next-widget/downloads)](https://packagist.org/packages/dominus77/yii2-social-likes-next-widget)
+
 Renders a [Social Likes Next](http://social-likes-next.js.org/) widget for Yii2.
 
 Beautiful share buttons for social networks: Facebook, Twitter, Google+, Pinterest, Telegram, LinkedIn, Vkontakte and Odnoklassniki.
