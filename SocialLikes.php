@@ -2,11 +2,11 @@
 
 namespace dominus77\sociallikesnext;
 
+use yii\web\View;
 use yii\web\JsExpression;
 use yii\helpers\Json;
 use yii\helpers\Html;
 use dominus77\sociallikesnext\assets\SocialLikesAsset;
-use yii\web\View;
 
 /**
  * Class SocialLikes

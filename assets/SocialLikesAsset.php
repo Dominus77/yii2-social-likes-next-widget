@@ -11,6 +11,21 @@ use yii\web\AssetBundle;
 class SocialLikesAsset extends AssetBundle
 {
     /**
+     * @var string
+     */
+    public $sourcePath = '';
+
+    /**
+     * @var array
+     */
+    public $css = [];
+
+    /**
+     * @var array
+     */
+    public $js = [];
+
+    /**
      * @inheritdoc
      */
     public function init()

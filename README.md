@@ -151,4 +151,4 @@ Once the extension is installed, simply use it in your code by  :
 Please, check the [Social Likes Next](https://github.com/sapegin/social-likes-next/tree/v1.1.0)
 
 ## License
-The BSD License (BSD). Please see [License File](https://github.com/Dominus77/yii2-social-likes-next-widget/blob/master/LICENSE.md) for more information.
+The MIT License (MIT). Please see [License File](https://github.com/Dominus77/yii2-social-likes-next-widget/blob/master/LICENSE.md) for more information.
