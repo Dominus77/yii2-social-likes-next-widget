@@ -6,6 +6,8 @@
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Dominus77/yii2-social-likes-next-widget/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Dominus77/yii2-social-likes-next-widget/?branch=master)
 [![Code Coverage](https://scrutinizer-ci.com/g/Dominus77/yii2-social-likes-next-widget/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/Dominus77/yii2-social-likes-next-widget/?branch=master)
 [![Total Downloads](https://poser.pugx.org/dominus77/yii2-social-likes-next-widget/downloads)](https://packagist.org/packages/dominus77/yii2-social-likes-next-widget)
+[![PayPal donate button](https://img.shields.io/badge/paypal-donate-yellow.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WYHQTDY4YWTHQ "Donate once-off to this project using Paypal")
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/50402619-dbb3-4e68-b6b2-fe0cad215bb9/mini.png)](https://insight.sensiolabs.com/projects/50402619-dbb3-4e68-b6b2-fe0cad215bb9)
 
 Renders a [Social Likes Next](http://social-likes-next.js.org/) widget for Yii2.
 
@@ -155,3 +157,6 @@ Please, check the [Social Likes Next](https://github.com/sapegin/social-likes-ne
 
 ## License
 The MIT License (MIT). Please see [License File](https://github.com/Dominus77/yii2-social-likes-next-widget/blob/master/LICENSE.md) for more information.
+
+## Sensio Labs
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/50402619-dbb3-4e68-b6b2-fe0cad215bb9/big.png)](https://insight.sensiolabs.com/projects/50402619-dbb3-4e68-b6b2-fe0cad215bb9)
