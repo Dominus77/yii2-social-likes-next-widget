@@ -1,5 +1,5 @@
 filter:
-    excluded_paths: [tests/*]
+    excluded_paths: [tests/*, assets/src/*]
 checks:
     php:
         code_rating: true
@@ -25,10 +25,10 @@ tools:
         config:
             standard: PSR2
         filter:
-            paths: ['Slider.php, assets']
+            paths: ['SocialLikes.php, assets']
     php_loc:
         enabled: true
-        excluded_dirs: [vendor, tests]
+        excluded_dirs: [vendor, tests, assets/src]
     php_cpd:
         enabled: true
-        excluded_dirs: [vendor, tests]
+        excluded_dirs: [vendor, tests, assets/src]
