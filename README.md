@@ -20,13 +20,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require dominus77/yii2-social-likes-next-widget "*"
+php composer.phar require dominus77/yii2-social-likes-next-widget "~1.0"
 ```
 
 or add
 
 ```
-"dominus77/yii2-social-likes-next-widget": "*"
+"dominus77/yii2-social-likes-next-widget": "~1.0"
 ```
 
 to the require section of your `composer.json` file.
