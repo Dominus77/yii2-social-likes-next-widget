@@ -66,7 +66,7 @@ class SocialLikes extends \yii\base\Widget
     public function init()
     {
         parent::init();
-        $this->id = $this->id ? $this->id : $this->getId();
+        $this->id = $this->id ?: $this->getId();
         $containerOptions = [
             'id' => $this->id,
         ];
@@ -150,12 +150,13 @@ class SocialLikes extends \yii\base\Widget
     /**
      * @param \yii\web\View $view
      */
-    protected function registerClientOptions($view)
+    public function registerClientOptions($view)
     {
         if (!empty($this->clientOptions)) {
             $options = Json::encode($this->clientOptions);
+            $id = $this->containerOptions['id'];
             $script = new JsExpression("
-                var container = document.getElementById('{$this->id}');
+                var container = document.getElementById('{$id}');
                 var socialLikes = SocialLikesNext.default;
                 socialLikes(container, {$options});
             ");

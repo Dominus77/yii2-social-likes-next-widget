@@ -19,9 +19,6 @@ class SocialLikesTest extends TestCase
         $widget = new SocialLikes([
             'theme' => \dominus77\sociallikesnext\SocialLikes::THEME_FLAT,
             'title' => true,
-            'clientOptions' => [
-                'options' => true,
-            ],
             'containerOptions' => [
                 'class' => 'social-likes_vertical',
                 'data-url' => 'http://landscapists.info/',
@@ -32,9 +29,6 @@ class SocialLikesTest extends TestCase
         $clientOptions = [
             'theme' => 'flat',
             'title' => true,
-            'clientOptions' => [
-                'options' => true,
-            ],
             'containerOptions' => [
                 'class' => 'social-likes_vertical',
                 'data-url' => 'http://landscapists.info/',
@@ -77,5 +71,15 @@ class SocialLikesTest extends TestCase
             'clientCss' => '.social-likes__button_mailru,',
         ]);
         $this->assertEquals($widget->run(), null);
+    }
+
+    public function testRegisterClientOptions()
+    {
+        $view = \Yii::$app->getView();
+        $widget = new SocialLikes();
+        $widget->clientOptions = [
+            'title' => 'GitHub'
+        ];
+        $this->assertEquals($widget->registerClientOptions($view), null);
     }
 }
