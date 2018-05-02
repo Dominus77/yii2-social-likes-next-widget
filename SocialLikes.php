@@ -83,23 +83,23 @@ class SocialLikes extends \yii\base\Widget
      */
     public function run()
     {
-        echo Html::beginTag('div', $this->containerOptions) . PHP_EOL;
-        $this->renderItems();
-        echo Html::endTag('div') . PHP_EOL;
+        $this->renderWidget($this->items);
     }
 
     /**
-     * Render items
+     * Render widget
+     * @param array $items
      */
-    protected function renderItems()
+    public function renderWidget($items = [])
     {
-        foreach ($this->items as $key => $options) {
-            $title = $this->title;
-            if (isset($options['title']))
-                $this->title = $options['title'];
-            if (isset($options['serviceOptions']))
-                echo Html::tag('div', $this->title ? $key : '', $options['serviceOptions']) . PHP_EOL;
-            $this->title = $title;
+        if (!empty($items)) {
+            echo Html::beginTag('div', $this->containerOptions) . PHP_EOL;
+            foreach ($items as $key => $options) {
+                $title = (isset($options['title'])) ? $options['title'] : $this->title;
+                if (isset($options['serviceOptions']))
+                    echo Html::tag('div', $title ? $key : '', $options['serviceOptions']) . PHP_EOL;
+            }
+            echo Html::endTag('div') . PHP_EOL;
         }
     }
 
