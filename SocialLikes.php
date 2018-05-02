@@ -79,10 +79,20 @@ class SocialLikes extends \yii\base\Widget
 
     /**
      * Run widget
+     * @return string|void
      */
     public function run()
     {
         echo Html::beginTag('div', $this->containerOptions) . PHP_EOL;
+        $this->renderItems();
+        echo Html::endTag('div') . PHP_EOL;
+    }
+
+    /**
+     * Render items
+     */
+    protected function renderItems()
+    {
         foreach ($this->items as $key => $options) {
             $title = $this->title;
             if (isset($options['title']))
@@ -91,7 +101,6 @@ class SocialLikes extends \yii\base\Widget
                 echo Html::tag('div', $this->title ? $key : '', $options['serviceOptions']) . PHP_EOL;
             $this->title = $title;
         }
-        echo Html::endTag('div') . PHP_EOL;
     }
 
     /**
@@ -101,11 +110,26 @@ class SocialLikes extends \yii\base\Widget
     {
         $view = $this->getView();
         SocialLikesAsset::register($view);
+        $this->registerClientCss($view);
+        $this->registerClientButton($view);
+        $this->registerClientOptions($view);
+    }
 
+    /**
+     * @param null|\yii\web\View $view
+     */
+    protected function registerClientCss($view = null)
+    {
         if (!empty($this->clientCss)) {
             $view->registerCss($this->clientCss);
         }
+    }
 
+    /**
+     * @param null|\yii\web\View $view
+     */
+    protected function registerClientButton($view = null)
+    {
         if (!empty($this->clientButtons)) {
             $clientButtons = Json::encode($this->clientButtons);
             $script = new JsExpression("
@@ -113,7 +137,13 @@ class SocialLikes extends \yii\base\Widget
             ");
             $view->registerJs($script, View::POS_BEGIN);
         }
+    }
 
+    /**
+     * @param null|\yii\web\View $view
+     */
+    protected function registerClientOptions($view = null)
+    {
         if (!empty($this->clientOptions)) {
             $options = Json::encode($this->clientOptions);
             $script = new JsExpression("

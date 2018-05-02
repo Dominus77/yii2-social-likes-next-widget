@@ -3,6 +3,8 @@
 [![Latest Stable Version](https://poser.pugx.org/dominus77/yii2-social-likes-next-widget/v/stable)](https://packagist.org/packages/dominus77/yii2-social-likes-next-widget)
 [![License](https://poser.pugx.org/dominus77/yii2-social-likes-next-widget/license)](https://github.com/Dominus77/yii2-social-likes-next-widget/blob/master/LICENSE.md)
 [![Build Status](https://travis-ci.com/Dominus77/yii2-social-likes-next-widget.svg?branch=master)](https://travis-ci.com/Dominus77/yii2-social-likes-next-widget)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Dominus77/yii2-social-likes-next-widget/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Dominus77/yii2-social-likes-next-widget/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/Dominus77/yii2-social-likes-next-widget/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/Dominus77/yii2-social-likes-next-widget/?branch=master)
 [![Total Downloads](https://poser.pugx.org/dominus77/yii2-social-likes-next-widget/downloads)](https://packagist.org/packages/dominus77/yii2-social-likes-next-widget)
 
 Renders a [Social Likes Next](http://social-likes-next.js.org/) widget for Yii2.
