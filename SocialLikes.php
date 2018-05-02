@@ -67,7 +67,6 @@ class SocialLikes extends \yii\base\Widget
     {
         parent::init();
         $this->id = $this->id ? $this->id : $this->getId();
-        $this->registerAssets();
         $containerOptions = [
             'id' => $this->id,
         ];
@@ -84,6 +83,7 @@ class SocialLikes extends \yii\base\Widget
     public function run()
     {
         if (!empty($this->items)) {
+            $this->registerAssets();
             echo Html::beginTag('div', $this->containerOptions) . PHP_EOL;
             $this->renderItems($this->items);
             echo Html::endTag('div') . PHP_EOL;
@@ -112,7 +112,7 @@ class SocialLikes extends \yii\base\Widget
     }
 
     /**
-     * Register client assets
+     * Register resources
      */
     protected function registerAssets()
     {
@@ -124,9 +124,9 @@ class SocialLikes extends \yii\base\Widget
     }
 
     /**
-     * @param null|\yii\web\View $view
+     * @param \yii\web\View $view
      */
-    protected function registerClientCss($view = null)
+    protected function registerClientCss($view)
     {
         if (!empty($this->clientCss)) {
             $view->registerCss($this->clientCss);
@@ -134,9 +134,9 @@ class SocialLikes extends \yii\base\Widget
     }
 
     /**
-     * @param null|\yii\web\View $view
+     * @param \yii\web\View $view
      */
-    protected function registerClientButton($view = null)
+    protected function registerClientButton($view)
     {
         if (!empty($this->clientButtons)) {
             $clientButtons = Json::encode($this->clientButtons);
@@ -148,9 +148,9 @@ class SocialLikes extends \yii\base\Widget
     }
 
     /**
-     * @param null|\yii\web\View $view
+     * @param \yii\web\View $view
      */
-    protected function registerClientOptions($view = null)
+    protected function registerClientOptions($view)
     {
         if (!empty($this->clientOptions)) {
             $options = Json::encode($this->clientOptions);
