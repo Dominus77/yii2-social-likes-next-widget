@@ -83,24 +83,32 @@ class SocialLikes extends \yii\base\Widget
      */
     public function run()
     {
-        $this->renderWidget($this->items);
+        if (!empty($this->items)) {
+            echo Html::beginTag('div', $this->containerOptions) . PHP_EOL;
+            $this->renderItems($this->items);
+            echo Html::endTag('div') . PHP_EOL;
+        }
     }
 
     /**
-     * Render widget
+     * Render items
      * @param array $items
      */
-    public function renderWidget($items = [])
+    public function renderItems($items = [])
     {
-        if (!empty($items)) {
-            echo Html::beginTag('div', $this->containerOptions) . PHP_EOL;
-            foreach ($items as $key => $options) {
-                $title = (isset($options['title'])) ? $options['title'] : $this->title;
-                if (isset($options['serviceOptions']))
-                    echo Html::tag('div', $title ? $key : '', $options['serviceOptions']) . PHP_EOL;
-            }
-            echo Html::endTag('div') . PHP_EOL;
+        foreach ($items as $key => $options) {
+            if (isset($options['serviceOptions']))
+                echo Html::tag('div', $this->getContentTitle($options) ? $key : '', $options['serviceOptions']) . PHP_EOL;
         }
+    }
+
+    /**
+     * @param array $options
+     * @return bool|mixed
+     */
+    protected function getContentTitle($options = [])
+    {
+        return (isset($options['title'])) ? $options['title'] : $this->title;
     }
 
     /**
